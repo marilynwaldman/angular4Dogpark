@@ -11,8 +11,9 @@ export class AppComponent {
   constructor(private dataService: DataService ){}
 
   ngOnInit(){
-    console.log(this.dataService.obj);
-    console.log(this.dataService.success());
+    //this.dataService.fetchData();
+    //console.log(this.dataService.obj);
+    //console.log(this.dataService.success());
   }
   
 }

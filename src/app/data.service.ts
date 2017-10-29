@@ -1,15 +1,24 @@
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class DataService {
 
-  constructor() { }
+  constructor(private http: Http) { }
+  
+  fetchData(){
+     return this.http.get('data/dogparks.json')
+              .map((response) => response.json())
+              .subscribe((data) => console.log(data));
 
-    obj = {
-      Id: " 1",
-      Name: "Twin Lakes Dog Park"
-
-    }
+  }
+    obj = [
+      {Id: " 1",
+      Name: "Twin Lakes Dog Park"} ,   
+     {Id: " 2",
+      Name: "Boulder Dog Park"}
+    ]
        
      success(){
          return "successful";
