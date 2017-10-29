@@ -9,8 +9,8 @@ export class DataService {
   
   fetchData(){
      return this.http.get('data/dogparks.json')
-              .map((response) => response.json())
-              .subscribe((data) => console.log(data));
+              .map((response) => response.json());
+              //.subscribe((data) => console.log(data));
 
   }
     obj = [

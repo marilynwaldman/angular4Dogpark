@@ -1,6 +1,6 @@
 [
-      {"Id": "1",
-      "Name": "Twin Lakes Dog Park"} ,   
-     {"Id": "2",
-      "Name": "Boulder Dog Park"}
+      {"id": 1,
+      "name": "Twin Lakes Dog Park"} ,   
+     {"id": 2,
+      "name": "Boulder Dog Park"}
 ]
