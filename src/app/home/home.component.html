@@ -1,5 +1,18 @@
-<ul>
-    <li *ngFor="let dogpark of dogparks">
-         {{dogpark.id}}  {{ dogpark.name }}
-    </li>
-</ul>
+
+<div >
+    <div class="container" *ngFor="let dogpark of dogparks">
+        <div class="row" >
+            <div class="col-md-8">
+             {{ dogpark.name }}
+            </div>
+            <div class="col-md-4">
+                <span class="btn btn-success pull-left" 
+                    (click)="editId=dogpark.id">Map</span>
+            </div>
+        </div>
+        
+        <br />
+    </div>
+
+    <span class="alert alert-danger" [hidden]="!errorMessage">{{ errorMessage }}</span>
+</div>
