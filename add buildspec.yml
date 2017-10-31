@@ -15,10 +15,10 @@ phases:
             - ng build --env=${BUILD_ENV}
     post_build:
          commands:
-            - aws s3 cp dist s3://${S3_BUCKET} --recursive
+            - aws s3 cp angular4Dogpark s3://${S3_BUCKET} --recursive
             - echo Build completed on `date`
 artifacts:
     files:
         - '**/*'
-    base-directory: '*'
+    base-directory: 'angular4Dogpark*'
     discard-paths: yes
