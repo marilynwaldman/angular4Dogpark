@@ -1,6 +1,31 @@
-# RoutingWBootstrap
+# Angular4Dogpark
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.5.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.5.  This is a simple app that will be used with Kubernetes, Jenkins and Docker.  Will be run on Google Cloud Platform.
+
+taken from 2 examples:
+
+https://hackernoon.com/angular-cli-and-docker-kubernetes-12bd30b345b
+https://github.com/avatsaev/angular4-docker-examples
+
+git clone ...
+cd
+npm install
+ng serve
+
+##  Build for production - creates  dist directory
+
+ng build --prod --aot
+
+
+## build docker image for nginx to upload to GCP
+
+docker build -t dogpark .
+docker run -d -p 8080:80 dogpark
+http://localhost:8080/
+
+
+
+
 
 ## Development server
 
