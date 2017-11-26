@@ -1,3 +1,3 @@
 #alpine image
 FROM nginx:alpine
-#create the server and location configuration
+COPY dist /usr/share/nginx/html
