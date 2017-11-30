@@ -8,7 +8,7 @@ export class DataService {
   constructor(private http: Http) { }
   
   fetchData(){
-     return this.http.get('data/dogparks.json')
+     return this.http.get('http://localhost:3000/dogpark')
               .map((response) => response.json());
               //.subscribe((data) => console.log(data));
 
