@@ -1,42 +1,3 @@
-# Angular4Dogpark
- 
-
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.5.  This is a simple app that will be used with Kubernetes, Jenkins and Docker.  Will be run on Google Cloud Platform.
-
-taken from 2 examples:
-
-https://hackernoon.com/angular-cli-and-docker-kubernetes-12bd30b345b
-https://github.com/avatsaev/angular4-docker-examples
-
-git clone ...
-cd
-npm install
-ng serve
-
-##  Build for production - creates  dist directory
-
-ng build --prod --aot
-
-
-## build docker image for nginx to upload to GCP
-
-docker build -t dogpark .
-docker run -d -p 8080:80 dogpark
-http://localhost:8080/
-
-
-
-
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-### Tutorial from :
-    https://medium.com/google-cloud/running-a-simple-kubernetes-frontend-backend-service-on-google-cloud-platform-85eb0346f600
-
-This works!!!!
 
 
 gcloud config set project testkube-187517
@@ -44,7 +5,7 @@ gcloud config set compute/zone us-west1-b
 
 gcloud container clusters create kubetest --num-nodes=3
 
-git clone https://github.com/marilynwaldman/kubefrontback.git
+git clone https://github.com/marilynwaldman/angular4Dogpark.git
 
 cd kub*
 
@@ -83,8 +44,43 @@ kubectl delete -f  fe-rc.yaml
 
 
 
+# Angular4Dogpark
+ 
 
 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.5.  This is a simple app that will be used with Kubernetes, Jenkins and Docker.  Will be run on Google Cloud Platform.
+
+taken from 2 examples:
+
+https://hackernoon.com/angular-cli-and-docker-kubernetes-12bd30b345b
+https://github.com/avatsaev/angular4-docker-examples
+
+git clone ...
+cd
+npm install
+ng serve
+
+##  Build for production - creates  dist directory
+
+ng build --prod --aot
+
+
+## build docker image for nginx to upload to GCP
+
+docker build -t dogpark .
+docker run -d -p 8080:80 dogpark
+http://localhost:8080/
+
+
+
+
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+### Tutorial from :
+    https://medium.com/google-cloud/running-a-simple-kubernetes-frontend-backend-service-on-google-cloud-platform-85eb0346f600
 
 
 ## Code scaffolding
