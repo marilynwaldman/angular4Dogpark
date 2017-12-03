@@ -1,50 +1,7 @@
 
+# Angular 
 
-gcloud config set project testkube-187517
-gcloud config set compute/zone us-west1-b 
-
-gcloud container clusters create kubetest --num-nodes=3
-
-git clone https://github.com/marilynwaldman/angular4Dogpark.git
-
-cd kub*
-
-cd fe
-   docker build -t fe .
-
-cd ../be
-   docker build -t be .
-
-cd ..
-
-kubectl create -f  be-rc.yaml
-kubectl create -f  be-srv.yaml
-kubectl create -f  fe-rc.yaml
-kubectl create -f  fe-srv.yaml
-
-
-kubectl get service
-
-
-docker tag fe gcr.io/testkube-187517/fe
-docker tag be gcr.io/testkube-187517/be
-
-gcloud docker -- push gcr.io/testkube-187517/be
-gcloud docker -- push gcr.io/testkube-187517/fe
-
-curl http://....
-
-kubectl logs -f POD-NAME
-
-kubectl delete -f  fe-srv.yaml
-kubectl delete -f  be-srv.yaml
-kubectl delete -f  be-rc.yaml
-kubectl delete -f  fe-rc.yaml
-
-
-
-
-# Angular4Dogpark
+Angular 4 frontend written to test Restful API on Kubernetes (GO Backend)
  
 
 
